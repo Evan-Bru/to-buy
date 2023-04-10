@@ -12,13 +12,17 @@ body {
 
 header {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
     position: fixed;
     padding: 48px;
     width: 100%;
     background-color: #4e4eec;
   }
+header.img {
+  height: 100vh;
+  width: 100%;
+}
 
 form {
   background-color: aqua;
