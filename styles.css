@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -11,6 +12,7 @@ body {
 }
 
 header {
+  font-family: 'Inspiration', cursive;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +24,6 @@ header {
 
 header.txt {
   color: rgba(0, 255, 255, 0.596);
-  font-family: 'Inspiration', cursive;
   height: 100px;
   width: 100px;
 }
