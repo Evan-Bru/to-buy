@@ -19,10 +19,6 @@ header {
     width: 100%;
     background-color: #6e6ee0;
   }
-header.img {
-  height: 100vh;
-  width: 100vh;
-}
 
 form {
   background-color: aqua;
