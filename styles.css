@@ -16,7 +16,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly ;
-  position: fixed;
+  /*position: fixed;*/
   padding: 48px;
   width: 100%;
   background-color: #6e6ee0;
