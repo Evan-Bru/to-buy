@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #48e7eccb;
+    color: white;
+    height: 100vh;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 48px;
+    width: 100%;
+    background-color: #09090A;
+  }
+
+  form {
+    display: flex;
+    padding: 182px 48px 48px;
+    width: fit-content;
+  }
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 64px;
+    height: 64px;
+    border: 2px solid #27272A;
+    border-radius: 8px;
+  
+    background: #18181B;
+  }
+  input:checked {
+    background-color: #8B5CF6;
+    border: 2px solid #A78BFA;
+  }
+  
+  @media (max-width: 570px) {
+    button div{
+      display: none;
+    }
+  }
