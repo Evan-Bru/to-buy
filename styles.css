@@ -17,9 +17,13 @@
     position: fixed;
     padding: 48px;
     width: 100%;
-    background-color: #09090A;
+    background-color: #4e4eec;
   }
 
+  form {
+    color: white;
+    display: list-item;
+  }
 
 
 
