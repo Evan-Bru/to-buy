@@ -23,13 +23,13 @@ header {
 header.txt {
   color: rgba(0, 255, 255, 0.596);
   font-family: 'Inspiration', cursive;
-  height: max-content;
-  width: max-content;
+  height: 100%;
+  width: 100%;
 }
 
 header.img{
-  height: min-content;
-  width: min-content;
+  height: 20px;
+  width: 20px;
 }
 
 form {
