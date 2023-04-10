@@ -40,3 +40,18 @@ form {
   padding: 182px 48px 48px;
   width: fit-content;
 }
+
+.types {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+}
+
+.foods .clean .groceries .drinks .meats {  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
