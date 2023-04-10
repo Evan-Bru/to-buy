@@ -18,12 +18,18 @@ header {
     padding: 48px;
     width: 100%;
     background-color: #6e6ee0;
-  }
+}
+
 header.txt {
   color: rgba(0, 255, 255, 0.596);
   font-family: 'Inspiration', cursive;
   height: max-content;
   width: max-content;
+}
+
+header.img{
+  height: min-content;
+  width: min-content;
 }
 
 form {
