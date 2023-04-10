@@ -21,42 +21,6 @@
   }
 
   form {
-    color: white;
-    display: list-item;
-  }
-
-
-
-  
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  input {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 64px;
-    height: 64px;
-    border: 2px solid #27272A;
-    border-radius: 8px;
-  
-    background: #18181B;
-  }
-  input:checked {
-    background-color: #8B5CF6;
-    border: 2px solid #A78BFA;
-  }
-  
-  @media (max-width: 570px) {
-    button div{
-      display: none;
-    }
+    display: flex;
+    border-color: red;
   }
