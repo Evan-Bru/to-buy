@@ -30,6 +30,7 @@ header.txt {
 header.img {
   height: 20px;
   width: 20px;
+  border-radius: 28px;
 }
 
 form {
