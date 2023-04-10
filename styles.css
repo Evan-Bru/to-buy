@@ -4,13 +4,13 @@
     box-sizing: border-box;
   }
 
-  body {
+body {
     background-color: #48e7eccb;
     color: white;
     height: 100vh;
   }
 
-  header {
+header {
     display: flex;
     align-items:center;
     justify-content: space-between;
@@ -20,7 +20,7 @@
     background-color: #4e4eec;
   }
 
-  form {
-    display: flex;
-    border-color: red;
-  }
+form {
+  background-color: aqua;
+  color: gray;
+}
