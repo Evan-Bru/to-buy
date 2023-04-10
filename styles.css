@@ -13,6 +13,7 @@ body {
 
 header {
   font-family: 'Inspiration', cursive;
+  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly ;
@@ -36,6 +37,7 @@ header.img {
 
 form {
   background-color: aqua;
+  margin-top: 48px;;
   color: gray;
   display: flex;
   padding: 182px 48px 48px;
@@ -50,9 +52,11 @@ form {
   width: fit-content;
 }
 
-.foods .clean .groceries .drinks .meats {  width: 64px;
+.foods .clean .groceries .drinks .meats {  
+  width: 64px;
   height: 64px;
   font-size: 32px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center; 
+  }
