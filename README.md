@@ -40,3 +40,8 @@ Esse projeto está sob a licença MIT.
 ---
 
 Feito com 💙 by Evan-Bru 💪
+
+
+
+
+*Futuras atualizações, adicionar tela de login com senha.
