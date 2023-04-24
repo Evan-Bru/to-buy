@@ -1,14 +1,26 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: #48e7eccb;
   color: white;
   height: 100vh;
+}
+
+.container {
+  max-width: 60px;
+  margin: 0 auto auto auto;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 65px;
+  text-align: center;
+  width: max-content;
+  height: max-content;
 }
 
 header {
@@ -19,32 +31,68 @@ header {
   justify-content: center;
   padding: 48px;
   width: 100%;
-  background-color: #6e6ee0;
-}
-
-header.h1 {
-  display: flex;
-  color: rgba(0, 255, 255, 0.596);
-  height: 100px;
-  width: 100px;
+  background-color: #6eade0;
 }
 
 header.img {
   display: flex ;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 28px;
 }
 
 form {
+  align-items: center;
+  justify-content: space-between;
   background-color: aqua;
-  margin-top: 48px;;
-  color: gray;
+  margin: 20px 20px 2px 20px;
+  color: rgb(121, 119, 119);
   display: flex;
-  padding: 182px 48px 48px;
+  padding: 30px 40px 48px 20px;
   width: fit-content;
 }
 
+form input[type="text"],
+form input[type="number"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4ca8af;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #4b4b4b;
+  padding: 10px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody td:last-child {
+  text-align: right;
+}
+
+/*
 .types {
   margin-top: 66px;
   display: flex;
