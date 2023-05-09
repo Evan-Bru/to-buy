@@ -1,87 +1,111 @@
-// Lista de compras
-const form = document.getElementById("form");
-const input = document.getElementById("input");
-const addButton = document.getElementById("add-button");
-const list = document.getElementById("list");
-
-let items = [];
-
-addButton.addEventListener("click", function (event) {
- 
-/////
-
-
+// Obtém os elementos HTML relevantes
+const form = document.getElementById("add-form");
 const productList = document.getElementById("product-list");
-const addButton = document.getElementById("add-button");
-const newProductName = document.getElementById("new-product-name");
-const newProductQuantity = document.getElementById("new-product-quantity");
-const errorMessage = document.getElementById("error-message");
+const newProductName = document.getElementById("item-input");
+const newProductBrand = document.getElementById("brand-input");
+const newProductQuantity = document.getElementById("quantity-input");
+const newProductType = document.getElementById("type-input");
 
-
+// Array para armazenar os produtos da lista
 let products = [];
 
 // Função que adiciona um novo produto à lista
 function addProduct(event) {
   event.preventDefault();
+
+  // Obtém os valores dos campos do formulário
   const productName = newProductName.value.trim();
+  const productBrand = newProductBrand.value.trim();
   const productQuantity = newProductQuantity.value.trim();
-  if (!productName || !productQuantity) {
-    errorMessage.textContent = "Os campos não podem ficar em branco!";
+  const productType = newProductType.value.trim();
+
+  // Verifica se os campos estão preenchidos corretamente
+  if (!productName || !productBrand || !productQuantity || !productType) {
+    alert("Os campos não podem ficar em branco!");
     return;
   }
+
+  // Cria um objeto para representar o produto
   const newProduct = {
     name: productName,
+    brand: productBrand,
     quantity: productQuantity,
+    type: productType,
   };
+
+  // Adiciona o produto ao array
   products.push(newProduct);
+
+  // Limpa os campos do formulário
   newProductName.value = "";
+  newProductBrand.value = "";
   newProductQuantity.value = "";
-  errorMessage.textContent = "";
+  newProductType.value = "";
+
+  // Renderiza a lista de produtos
   renderProductList();
 }
 
-// Função que remove um produto da lista
-function removeProduct(event) {
-  const productIndex = parseInt(event.target.dataset.index);
-  products.splice(productIndex, 1);
+// Função para remover um produto da lista
+function removeProduct(index) {
+  products.splice(index, 1);
   renderProductList();
 }
 
-// Função que altera a quantidade de um produto na lista
-function changeProductQuantity(event) {
-  const productIndex = parseInt(event.target.dataset.index);
-  const newQuantity = event.target.value.trim();
-  if (!newQuantity) {
-    errorMessage.textContent = "A quantidade não pode ficar em branco!";
-    return;
-  }
-  products[productIndex].quantity = newQuantity;
-  errorMessage.textContent = "";
-  renderProductList();
+// Função para alterar a quantidade de um produto na lista
+function changeProductQuantity(index, newQuantity) {
+  products[index].quantity = newQuantity;
 }
 
-// Função que renderiza a lista de produtos
+// Função para renderizar a lista de produtos
 function renderProductList() {
-  let html = "";
+  // Limpa a tabela antes de renderizar novamente
+  productList.innerHTML = "";
+
+  // Percorre o array de produtos e cria as linhas da tabela
   for (let i = 0; i < products.length; i++) {
-    html += `
-      <li class="product">
-        <span class="product-name">${products[i].name}</span>
-        <input type="text" class="product-quantity" value="${products[i].quantity}" data-index="${i}" />
-        <button class="remove-button" data-index="${i}">Remover</button>
-      </li>
-    `;
-  }
-  productList.innerHTML = html;
-  const removeButtons = document.getElementsByClassName("remove-button");
-  const quantityInputs = document.getElementsByClassName("product-quantity");
-  for (let i = 0; i < removeButtons.length; i++) {
-    removeButtons[i].addEventListener("click", removeProduct);
-    quantityInputs[i].addEventListener("change", changeProductQuantity);
+    const product = products[i];
+
+    // Cria uma nova linha na tabela
+    const row = document.createElement("tr");
+
+    // Cria as células para o nome, marca, quantidade e tipo
+    const nameCell = document.createElement("td");
+    const brandCell = document.createElement("td");
+    const quantityCell = document.createElement("td");
+    const typeCell = document.createElement("td");
+    const actionCell = document.createElement("td");
+
+    // Preenche as células com os valores do produto
+    nameCell.textContent = product.name;
+    brandCell.textContent = product.brand;
+    quantityCell.textContent = product.quantity;
+    typeCell.textContent = product.type;
+
+    // Cria o botão de remoção
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remover";
+    removeButton.addEventListener("click", () => {
+      removeProduct(i);
+    });
+
+    // Adiciona o botão de remoção à célula de ação
+    actionCell.appendChild(removeButton);
+
+    // Adiciona as células à linha da tabela
+    row.appendChild(nameCell);
+    row.appendChild(brandCell);
+    row.appendChild(quantityCell);
+    row.appendChild(typeCell);
+    row.appendChild(actionCell);
+
+    // Adiciona a linha à tabela
+    productList.appendChild(row);
   }
 }
 
-// Adiciona os event listeners aos botões
-addButton.addEventListener("click", addProduct);
-loginButton.addEventListener("click", checkLoginCode);
-})
+// Adiciona o evento de envio do formulário para a função de adicionar produto
+form.addEventListener("submit", addProduct);
+
+// Renderiza a lista de produtos inicialmente (caso haja produtos pré-existentes)
+renderProductList();
