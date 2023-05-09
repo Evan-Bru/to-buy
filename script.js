@@ -1,27 +1,3 @@
-// Login
-const loginForm = document.getElementById("login-form");
-const loginInput = document.getElementById("login-input");
-const loginButton = document.getElementById("login-button");
-
-const validCode = "123456";
-
-loginButton.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  if (loginInput.value === validCode) {
-    showApp();
-  } else {
-    alert("Código inválido. Tente novamente.");
-    loginInput.value = "";
-    loginInput.focus();
-  }
-});
-
-function showApp() {
-  document.getElementById("login-container").style.display = "none";
-  document.getElementById("app-container").style.display = "block";
-}
-
 // Lista de compras
 const form = document.getElementById("form");
 const input = document.getElementById("input");
@@ -40,23 +16,9 @@ const addButton = document.getElementById("add-button");
 const newProductName = document.getElementById("new-product-name");
 const newProductQuantity = document.getElementById("new-product-quantity");
 const errorMessage = document.getElementById("error-message");
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-button");
-const loginCode = "123456";
+
 
 let products = [];
-
-// Função que verifica o código de login
-function checkLoginCode(event) {
-  event.preventDefault();
-  const inputCode = document.getElementById("login-code").value;
-  if (inputCode === loginCode) {
-    loginForm.classList.add("hidden");
-    productList.classList.remove("hidden");
-  } else {
-    errorMessage.textContent = "Código incorreto!";
-  }
-}
 
 // Função que adiciona um novo produto à lista
 function addProduct(event) {
@@ -122,3 +84,4 @@ function renderProductList() {
 // Adiciona os event listeners aos botões
 addButton.addEventListener("click", addProduct);
 loginButton.addEventListener("click", checkLoginCode);
+})

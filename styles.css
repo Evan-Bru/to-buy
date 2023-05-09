@@ -24,7 +24,7 @@ h1 {
 }
 
 header {
-  font-family: 'Inspiration', cursive;
+  font-family: 'Dancing Script', cursive;
   margin: 10px;
   display: flex;
   align-items: center;
@@ -45,10 +45,10 @@ form {
   align-items: center;
   justify-content: space-between;
   background-color: aqua;
-  margin: 20px auto;
+  margin: 20px 10px 10px 10px;
   color: rgb(121, 119, 119);
   display: flex;
-  padding: 30px 20px 30px 20px;
+  padding: 20px 10px 20px 10px;
   width: fit-content;
 }
 
@@ -92,20 +92,11 @@ tbody td:last-child {
   text-align: right;
 }
 
-/*
-.types {
-  margin-top: 66px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: fit-content;
-}
 
-.foods .clean .groceries .drinks .meats {  
-  width: 64px;
-  height: 64px;
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
+
+
+@media only screen and (max-width: 600px) {
+  * {
+    max-height: 50vh;
   }
+}
