@@ -33,6 +33,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 To-buy é um app criado para facilitar compras em supermercado e diminuir o uso de papel.
 
+## 🔍 Prévia
+
+Uma prévia desse projeto se encontra em: https://evan-bru.github.io/to-buy/
+
 ##  📝 Licença
 
 Esse projeto está sob a licença MIT.
